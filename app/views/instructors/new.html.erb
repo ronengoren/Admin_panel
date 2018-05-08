@@ -1,0 +1,20 @@
+<%= form_for @instructors do |f| %>
+<%= f.label :first_name %>
+<%= f.text_field :first_name %>
+<%= f.label :last_name %>
+<%= f.text_field :last_name %>
+<%= f.label :age %>
+<%= f.text_field :age %>
+<%= f.label :salary %>
+<%= f.text_field :salary %>
+<%= f.label :highest_education %>
+<%= f.text_field :highest_education %>
+<h1>Choose Course:</h1>
+<%= collection_radio_buttons(:instructor, :course_id, Course.all, :id, :name_with_initial) do |c| %>
+<div>
+<%= c.radio_button %>
+<%= c.label %>
+</div>
+<% end %>
+<%= f.submit %>
+<% end %>

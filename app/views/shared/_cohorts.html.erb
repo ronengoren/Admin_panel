@@ -1,0 +1,40 @@
+
+<div id="content">
+<div class="widget-box">
+  <div class="widget-title"> <span class="icon">
+    <input type="checkbox" id="title-checkbox" name="title-checkbox" />
+    </span>
+    <h5>Cohorts</h5>
+  </div>
+  <div class="widget-content nopadding">
+    <table class="table table-bordered table-striped with-check">
+      <thead>
+        <tr>
+          <th><i class="icon-resize-vertical"></i></th>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Start Date</th>
+          <th>End Date</th>
+          <th>Course</th>
+
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <% @cohorts.each do |d| %>
+
+          <td><input type="checkbox" /></td>
+          <td><%= d.id %></td>
+          <td><%= d.name %></td>
+          <td><%= d.start_date %></td>
+          <td><%= d.end_date %></td>
+          <td><%= d.course.name %></td>
+
+        </tr>
+        <% end %>
+
+      </tbody>
+    </table>
+  </div>
+</div>
+</div>

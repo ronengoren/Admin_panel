@@ -1,0 +1,11 @@
+<%= form_for @tasks do |f| %>
+<%= f.label :name %>
+<%= f.text_field :name, value: @tasks.name %>
+<%= f.label :description %>
+<%= f.text_field :description, value: @tasks.description %>
+<%= f.label :completed %>
+<%= f.text_field :completed, value: @tasks.completed %>
+<%= f.submit %>
+<% end %>
+
+<%= button_to 'Delete', tasks_path(@tasks), method: :delete %>
