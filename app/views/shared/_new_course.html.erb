@@ -1,0 +1,39 @@
+<div id="content">
+  <div id="content-header">
+
+<div class="row-fluid">
+  <div class="span12">
+<div class="widget-box">
+  <div class="widget-title"> <span class="icon"> <i class="icon-align-justify"></i> </span>
+
+
+    <h5>Add Course</h5>
+  </div>
+  <div class="widget-content nopadding">
+    <div class="form-horizontal">
+
+      <div class="control-group">
+        <%= form_for @courses do |f| %>
+        <%= f.label :name, "Course name :", class: "control-label" %>
+        <div class="controls">
+      <%= f.text_field :name, class: 'span11', autofocus: true, placeholder: 'Course Name' %>
+        </div>
+      </div>
+      <div class="control-group">
+        <%= f.label :total_class_hour, "Total Class Hours :", class: "control-label" %>
+        <div class="controls">
+      <%= f.text_field :total_class_hour, class: 'span11', autofocus: true, placeholder: 'Total Class Hour' %>
+        </div>
+      </div>
+      
+      <div class="form-actions">
+      <%= f.submit :Submit, class: "btn btn-success"%>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+</div>
+</div>

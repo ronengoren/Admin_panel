@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
-root 'login#index'
+  devise_for :users
+  root 'dashboard#index'
 
   resources :owners
   resources :dogs
@@ -12,6 +13,7 @@ root 'login#index'
   resources :tasks
   resources :login
   resources :dashboard
+
 
 
 

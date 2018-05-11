@@ -1,7 +1,7 @@
 class InstructorsController < ApplicationController
 
   def index
-    @instructors = Instructor.all
+    @instructors = Instructor.all.order("id ASC")
   end
 
   def show

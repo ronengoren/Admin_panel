@@ -3,7 +3,9 @@ class StudentsController < ApplicationController
 
 
 def index
-  @students = Student.all
+
+  @students = Student.all.order("id ASC")
+
 end
 
 def show
@@ -25,8 +27,8 @@ end
 
 def update
   @students = Student.find(params[:id])
-  @students.update_attributes(student_params)
-      respond_with @students
+  @students.update(student_params)
+  redirect_to '/students'
 
     end
 

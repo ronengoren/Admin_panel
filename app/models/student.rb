@@ -1,4 +1,6 @@
 class Student < ApplicationRecord
+
+
   belongs_to :cohort
   belongs_to :course
 

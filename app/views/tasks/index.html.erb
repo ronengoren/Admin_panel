@@ -1,6 +1,8 @@
 
 
+<%= link_to 'New Task', new_task_path, remote: true, id: "ajaxcall" %>
 
+<div id="my-tasks">
 <% @tasks.each do |d| %>
 <div>
 <br>
@@ -13,3 +15,6 @@
 </div>
 
 <% end %>
+</div>
+<div id="task-form" style="display:none;">
+</div>

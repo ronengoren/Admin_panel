@@ -1,20 +1,2 @@
-<%= form_for @cohorts do |f| %>
-<%= f.label :name %>
-<%= f.text_field :name, value: @cohorts.name %>
-<%= f.label :start_date %>
-<%= f.text_field :start_date, value: @cohorts.start_date %>
-<%= f.label :end_date %>
-<%= f.text_field :end_date, value: @cohorts.end_date %>
-<h1>Update Course To:</h1>
-
-<%= collection_radio_buttons(:cohort, :course_id, Course.all, :id, :name_with_initial, include_hidden: false) do |b| %>
-<div>
-<%= b.radio_button %>
-<%= b.label %>
-</div>
-<% end %>
-
-<%= f.submit %>
-<% end %>
-
-<%= button_to 'Delete', cohort_path(@cohorts), method: :delete, confirm: 'Are you sure?' %>
+<%= render 'shared/navbar' %>
+<%= render 'shared/cohort_edit' %>

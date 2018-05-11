@@ -1,11 +1,2 @@
-<%= form_for @courses do |f| %>
-<%= f.label :name %>
-<%= f.text_field :name, value: @courses.name %>
-<%= f.label :total_class_hour %>
-<%= f.text_field :total_class_hour, value: @courses.total_class_hour %>
-<%= f.submit %>
-
-<% end %>
-
-
-<%= button_to 'Delete', course_path(@courses), method: :delete, confirm: 'Are you sure?' %>
+<%= render 'shared/navbar' %>
+<%= render 'shared/course_edit' %>

@@ -24,12 +24,12 @@ class TasksController < ApplicationController
   def update
     @tasks = Task.find(params[:id])
     @tasks.update(task_params)
-    redirect_to '/tasks'
+    redirect_to '/dashboard'
   end
 
   def destroy
     Task.find(params[:id]).destroy
-    redirect_to '/tasks'
+    redirect_to '/dashboard'
   end
 
   private
@@ -37,10 +37,5 @@ class TasksController < ApplicationController
   def task_params
     params.require(:task).permit(:name, :description, :completed)
   end
-
-
-
-
-
 
 end

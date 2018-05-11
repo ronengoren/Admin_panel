@@ -1,8 +1,2 @@
-<%= form_for @courses do |f| %>
-<%= f.label :name %>
-<%= f.text_field :name %>
-<%= f.label :total_class_hour %>
-<%= f.text_field :total_class_hour %>
-
-<%= f.submit %>
-<% end %>
+<%= render 'shared/navbar' %>
+<%= render 'shared/new_course' %>

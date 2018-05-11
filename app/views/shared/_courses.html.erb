@@ -10,7 +10,7 @@
     <table class="table table-bordered table-striped with-check">
       <thead>
         <tr>
-          <th><i class="icon-resize-vertical"></i></th>
+          <th>Edit/Delete</th>
           <th>ID</th>
           <th>Name</th>
           <th>Total Class Hours</th>
@@ -21,8 +21,9 @@
         <tr>
           <% @courses.each do |d| %>
 
-          <td><input type="checkbox" /></td>
-          <td><%= d.id %></td>
+          <td><div class="pull-right"><%= link_to "", edit_course_path(d.id), class: "icon-pencil" %>
+          <%= link_to "", course_path(@courses), method: :delete,
+        data: { confirm: "Are you sure you want to delete this project?" }%></td>          <td><%= d.id %></td>
           <td><%= d.name %></td>
           <td><%= d.total_class_hour %></td>
 

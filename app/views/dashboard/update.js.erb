@@ -1,0 +1,4 @@
+console.log('I am hitting the js file for update')
+
+$('#edit_task_<%= @tasks.id %>').hide();
+$('#edit_task_<%= @tasks.id %>').replaceWith('<%= j render partial: "shared/task", locals: {task: @tasks} %>');

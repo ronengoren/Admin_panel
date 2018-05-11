@@ -1,0 +1,5 @@
+console.log('Im hitting this file for the new action');
+
+let form = document.getElementById('task-form');
+form.innerHTML = "<%= j (render 'shared/new_task') %>";
+form.style.display = "block";

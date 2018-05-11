@@ -1,24 +1,2 @@
-<%= form_for @instructors do |f| %>
-  <%= f.label :first_name %>
-  <%= f.text_field :first_name, value: @instructors.first_name %>
-  <%= f.label :last_name %>
-  <%= f.text_field :last_name, value: @instructors.last_name %>
-  <%= f.label :age %>
-  <%= f.text_field :age, value: @instructors.age %>
-  <%= f.label :salary %>
-  <%= f.text_field :salary, value: @instructors.salary %>
-  <%= f.label :highest_education %>
-  <%= f.text_field :highest_education, value: @instructors.highest_education %>
-
-<h1>Update Course To:</h1>
-
-<%= collection_radio_buttons(:instructor, :course_id, Course.all, :id, :name_with_initial, include_hidden: false) do |c| %>
-<div>
-<%= c.radio_button %>
-<%= c.label %>
-</div>
-<% end %>
-<%= f.submit %>
-<% end %>
-
-<%= button_to 'Delete', instructor_path(@instructors), method: :delete, confirm: 'Are you sure?' %>
+<%= render 'shared/navbar' %>
+<%= render 'shared/instructor_edit' %>

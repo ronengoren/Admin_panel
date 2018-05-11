@@ -4,13 +4,13 @@
   <div class="widget-title"> <span class="icon">
     <input type="checkbox" id="title-checkbox" name="title-checkbox" />
     </span>
-    <h5>Courses</h5>
+    <h5>Instructors</h5>
   </div>
   <div class="widget-content nopadding">
     <table class="table table-bordered table-striped with-check">
       <thead>
         <tr>
-          <th><i class="icon-resize-vertical"></i></th>
+          <th>Edit/Delete</th>
           <th>ID</th>
           <th>First Name</th>
           <th>Last Name</th>
@@ -25,7 +25,9 @@
         <tr>
           <% @instructors.each do |d| %>
 
-          <td><input type="checkbox" /></td>
+          <td><div class="pull-right"><%= link_to "", edit_instructor_path(d.id), class: "icon-pencil" %>
+          <%= link_to "", instructor_path(@instructors), method: :delete,
+          data: { confirm: "Are you sure you want to delete this project?" }%></td>
           <td><%= d.id %></td>
           <td><%= d.first_name %></td>
           <td><%= d.last_name %></td>

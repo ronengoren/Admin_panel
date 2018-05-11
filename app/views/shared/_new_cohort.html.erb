@@ -1,0 +1,51 @@
+<div id="content">
+  <div id="content-header">
+
+<div class="row-fluid">
+  <div class="span12">
+<div class="widget-box">
+  <div class="widget-title"> <span class="icon"> <i class="icon-align-justify"></i> </span>
+
+
+    <h5>New Cohort</h5>
+  </div>
+  <div class="widget-content nopadding">
+    <div class="form-horizontal">
+
+      <div class="control-group">
+        <%= form_for @cohorts do |f| %>
+        <%= f.label :name, "Name :", class: "control-label" %>
+        <div class="controls">
+      <%= f.text_field :name, class: 'span11', autofocus: true, placeholder: 'Cohort Name' %>
+        </div>
+      </div>
+      <div class="control-group">
+        <%= f.label :start_date, "Cohort Start Date :", class: "control-label" %>
+        <div class="controls">
+      <%= f.text_field :start_date, class: 'span11', autofocus: true, placeholder: 'Start Date' %>
+        </div>
+      </div>
+      <div class="control-group">
+        <%= f.label :end_date, "Cohort End Date :", class: "control-label" %>
+        <div class="controls">
+      <%= f.text_field :end_date, class: 'span11', autofocus: true, placeholder: 'End Date' %>
+        </div>
+      </div>
+      <div class="control-group">
+        <%= f.label :course_id, "Course :", class: "control-label" %>
+        <div class="controls">
+          <%= f.collection_select(:course_id, Course.all, :id, :name_with_initial, prompt: true, class: "form-control") %>
+        </div>
+      </div>
+
+      <div class="form-actions">
+      <%= f.submit :Submit, class: "btn btn-success"%>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+</div>
+</div>

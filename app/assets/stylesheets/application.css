@@ -12,7 +12,6 @@
  *
 
  *= require_self
- *= require_tree .
  *= require font-awesome
  *= require bootstrap.min
  *= require bootstrap-responsive.min
@@ -20,6 +19,7 @@
  *= require matrix-style
  *= require matrix-media
  *= require jquery.gritter
+ *= require_tree .
 
 
  */

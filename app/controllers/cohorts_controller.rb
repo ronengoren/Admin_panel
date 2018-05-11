@@ -2,7 +2,7 @@ class CohortsController < ApplicationController
 
 
   def index
-    @cohorts = Cohort.all
+    @cohorts = Cohort.all.order("id ASC")
   end
 
   def show

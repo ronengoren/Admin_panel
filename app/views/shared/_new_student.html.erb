@@ -1,13 +1,17 @@
 <div id="content">
+  <div id="content-header">
 
 <div class="row-fluid">
   <div class="span12">
 <div class="widget-box">
   <div class="widget-title"> <span class="icon"> <i class="icon-align-justify"></i> </span>
-    <h5>Add student</h5>
+
+
+    <h5>Add New Student</h5>
   </div>
   <div class="widget-content nopadding">
-    <form action="#" method="get" class="form-horizontal">
+    <div class="form-horizontal">
+
       <div class="control-group">
         <%= form_for @students do |f| %>
         <%= f.label :first_name, "First name :", class: "control-label" %>
@@ -30,28 +34,28 @@
       <div class="control-group">
         <%= f.label :highest_education, "Highest Education :", class: "control-label" %>
         <div class="controls">
-      <%= f.select :highest_education, options_for_select(["HS","College","Masters", "PHD"]), {}, class: "form-control", autofocus: true %>
+      <%= f.select :highest_education, options_for_select(["HS","College","Masters", "PHD"]), {}, class: "form-control", autofocus: true, prompt: true %>
         </div>
       </div>
       <div class="control-group">
         <%= f.label :cohort_id, "Cohort :", class: "control-label" %>
         <div class="controls">
-          <%= collection_select(:student, :cohort_id, Cohort.all, :id, :name_with_initial, prompt: true, class: "form-control") %>
+          <%= f.collection_select(:cohort_id, Cohort.all, :id, :name_with_initial, prompt: true, class: "form-control") %>
         </div>
       </div>
       <div class="control-group">
         <%= f.label :course_id, "Course :", class: "control-label" %>
         <div class="controls">
-          <%= collection_select(:student, :course_id, Course.all, :id, :name_with_initial, prompt: true, class: "form-control") %>
+          <%= f.collection_select(:course_id, Course.all, :id, :name_with_initial, prompt: true, class: "form-control") %>
         </div>
       </div>
       <div class="form-actions">
-      <%= f.submit :Submit, class: 'btn btn-success' %>
+      <%= f.submit :Submit, class: "btn btn-success"%>
         <% end %>
-
       </div>
-    </form>
+    </div>
   </div>
+</div>
 </div>
 </div>
 </div>
