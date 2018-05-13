@@ -27,9 +27,6 @@
 //= require bootstrap-colorpicker
 //= require bootstrap-datepicker
 //= require activestorage
-//= require matrix.interface
-//= require matrix.login
-//= require matrix.dashboard
 //= require jquery.easy-pie-chart
 //= require excanvas.min
 //= require matrix.calendar

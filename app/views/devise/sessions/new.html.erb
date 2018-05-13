@@ -1,15 +1,37 @@
-<h2>Log in</h2>
+
+
+<div id="loginbox">
+  <div id="loginform" class="form-vertical">
+
+    <div class="control-group normal_text"> <h3><img src="<%= image_path('/theme/html/img/logo1.png') %>" alt="Logo" /></h3></div>
+
+    <div class="control-group">
+      <div class="controls">
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
 
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
+
+<br>
+<div class="main_input_box">
+
+    <span class="add-on bg_lg"><i class="icon-user"></i></span><%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: 'Email' %>
   </div>
+</div>
+
+</div>
+
+<div class="control-group">
+  <div class="controls">
+    <div class="main_input_box">
+
+
+    <div id="loginform" class="form-vertical">
+
+    <span class="add-on bg_ly"><i class="icon-lock"></i></span><%= f.password_field :password, autocomplete: "off", placeholder: 'Password' %>
+  </div>
+</div>
+</div>
+</div>
 
   <% if devise_mapping.rememberable? -%>
     <div class="field">
@@ -18,9 +40,18 @@
     </div>
   <% end -%>
 
-  <div class="actions">
-    <%= f.submit "Log in" %>
+  <div class="form-actions">
+    <span class="pull-left"><a href="#" class="flip-link btn btn-info" id="to-recover">Lost password?</a></span>
+
+    <span class="pull-right"><%= f.submit "Log in", class: "btn btn-success" %></span>
   </div>
 <% end %>
 
 <%= render "devise/shared/links" %>
+
+
+
+
+</div>
+
+</div>

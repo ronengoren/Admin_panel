@@ -13,6 +13,8 @@ Rails.application.routes.draw do
   resources :tasks
   resources :login
   resources :dashboard
+  resources :activities
+
 
 
 

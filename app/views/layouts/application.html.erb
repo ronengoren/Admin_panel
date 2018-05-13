@@ -5,11 +5,16 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <%= javascript_include_tag "application" %>
+    <%= javascript_include_tag 'http://ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.min.js' %>
+
+    <%= jquery_include_tag :google, force: true %>
+
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
 <div id="user-nav" class="navbar navbar-inverse">
+
 
 
 <% if user_signed_in? %>
@@ -21,6 +26,15 @@
   <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
 <% end %>
 </div>
+
+<div id="search">
+  <input type="text" placeholder="Search here..."/>
+  <button type="submit" class="tip-bottom" title="Search"><i class="icon-search icon-white"></i></button>
+</div>
+
+
+
+
 <% if notice %>
   <p class="alert alert-success"><%= notice %></p>
 <% end %>

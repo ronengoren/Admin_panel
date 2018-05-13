@@ -30,6 +30,7 @@
             <ul>
               <div id="my-tasks">
                 <div id="task-form" style="display:none;"></div>
+                
               <% @tasks.each do |d| %>
               <div>
               <br>
@@ -37,7 +38,7 @@
               <li class="clearfix" id="task-<%= d.id %>">
                 <div class="txt"> <%= d.description %> <span class="by label"><%= d.name %></span></div>
                 <div class="pull-right"><%= link_to '', edit_task_path(d.id), remote: true, class: "icon-pencil"  %>
-                 <%= link_to "", {:controller => :dashboard, :action => 'destroy', :id => d.id }, :method => :delete, remote: true, class: "icon-remove" %>
+                 <%= link_to "", {:controller => :dashboard, :action => 'destroy', :id => d.id }, :method => :delete, remote: true, class: "icon-remove", data: { confirm: 'Are you sure?' } %>
                 </div>
               </li>
               <% end %>
@@ -47,31 +48,33 @@
       </div>
       </div>
 
-    <div class="span6">
-
-    <div class="widget-box">
-      <div class="widget-title bg_ly" data-toggle="collapse" href="#collapseG2"><span class="icon"><i class="icon-chevron-down"></i></span>
+<div class="span6">
+  <div class="widget-box">
+        <div class="widget-title bg_ly" data-toggle="collapse" href="#collapseG2"><span class="icon"><i class="icon-chevron-down"></i></span>
         <h5>Recent Activity</h5>
-      </div>
-      <div class="widget-content nopadding collapse in" id="collapseG2">
+        </div>
+    <div class="widget-content nopadding collapse in" id="collapseG2">
         <ul class="recent-posts">
+        <% @activities.each do |activity| %>
+        <div class="activity">
+          </div>
+
           <li>
 
-            <div class="user-thumb"> <img width="40" height="40" alt="User" src="<%= image_path('/img/demo/av1.jpg') %>"> </div>
-            <div class="article-post"> <span class="user-info"> By: john Deo / Date: 2 Aug 2012 / Time:09:27 AM </span>
-              <p><a href="#">This is a much longer one that will go on for a few lines.It has multiple paragraphs and is full of waffle to pad out the comment.</a> </p>
+            <div class="article-post"> <span class="user-info"><%= link_to activity.owner.email, activity.owner if activity.owner %> </span>
+              <p><a href="#">    <%= render_activity activity %></a> </p>
             </div>
           </li>
+            <% end %>
 
           <li>
             <button class="btn btn-warning btn-mini">View All</button>
           </li>
-        </ul>
-      </div>
+          </ul>
+          </div>
+          </div>
+        </div>
     </div>
   </div>
-</div>
-  </div>
-</div>
 </div>
 <!--End-Action boxes-->

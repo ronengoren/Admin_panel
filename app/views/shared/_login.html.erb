@@ -1,56 +1,59 @@
 
 
-
-
-
 <div id="loginbox">
-    <form id="loginform" class="form-vertical" action="index.html">
- <div class="control-group normal_text"> <h3><img src="<%= image_path('/theme/html/img/logo1.png') %>" alt="Logo" /></h3></div>
-        <div class="control-group">
-            <div class="controls">
+  <div id="loginform" class="form-vertical">
 
-              <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    <div class="control-group normal_text"> <h3><img src="<%= image_path('/theme/html/img/logo1.png') %>" alt="Logo" /></h3></div>
 
-                <div class="main_input_box">
-                    <span class="add-on bg_lg"><i class="icon-user"></i></span><%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: 'Email' %>
-                </div>
-            </div>
-        </div>
-        <div class="control-group">
-            <div class="controls">
-                <div class="main_input_box">
-                    <span class="add-on bg_ly"><i class="icon-lock"></i></span><%= f.password_field :password, autocomplete: "off", placeholder: 'Password'  %>
-                </div>
-            </div>
-        </div>
-        <% if devise_mapping.rememberable? -%>
-          <div class="field">
-            <%= f.check_box :remember_me %>
-            <%= f.label :remember_me %>
-          </div>
-        <% end -%>
+    <div class="control-group">
+      <div class="controls">
 
-        <div class="form-actions">
-            <span class="pull-left"><a href="#" class="flip-link btn btn-info" id="to-recover">Lost password?</a></span>
-            <span class="pull-right"><%= f.submit "Log in", class: "btn btn-success" %></span>
-        </div>
-        <% end %>
+<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
 
-        <%= render "devise/shared/links" %>
 
-    </form>
-    <form id="recoverform" action="#" class="form-vertical">
-<p class="normal_text">Enter your e-mail address below and we will send you instructions how to recover a password.</p>
 
-            <div class="controls">
-                <div class="main_input_box">
-                    <span class="add-on bg_lo"><i class="icon-envelope"></i></span><input type="text" placeholder="E-mail address" />
-                </div>
-            </div>
 
-        <div class="form-actions">
-            <span class="pull-left"><a href="#" class="flip-link btn btn-success" id="to-login">&laquo; Back to login</a></span>
-            <span class="pull-right"><a class="btn btn-info"/>Reecover</a></span>
-        </div>
-    </form>
+
+<div class="main_input_box">
+
+    <span class="add-on bg_lg"><i class="icon-user"></i></span><%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: 'Email' %>
+  </div>
+</div>
+
+</div>
+
+<div class="control-group">
+  <div class="controls">
+    <div class="main_input_box">
+
+
+    <div id="loginform" class="form-vertical">
+
+    <span class="add-on bg_ly"><i class="icon-lock"></i></span><%= f.password_field :password, autocomplete: "off", placeholder: 'Password' %>
+  </div>
+</div>
+</div>
+</div>
+
+  <% if devise_mapping.rememberable? -%>
+    <div class="field">
+      <%= f.check_box :remember_me %>
+      <%= f.label :remember_me %>
+    </div>
+  <% end -%>
+
+  <div class="form-actions">
+    <span class="pull-left"><a href="#" class="flip-link btn btn-info" id="to-recover">Lost password?</a></span>
+
+    <span class="pull-right"><%= f.submit "Log in", class: "btn btn-success" %></span>
+  </div>
+<% end %>
+
+<%= render "devise/shared/links" %>
+
+
+
+
+</div>
+
 </div>

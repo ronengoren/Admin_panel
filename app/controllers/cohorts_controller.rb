@@ -25,7 +25,7 @@ class CohortsController < ApplicationController
   def update
     @cohorts = Cohort.find(params[:id])
     @cohorts.update(cohort_params)
-    redirect_to '/students'
+    redirect_to '/cohorts'
   end
 
   def destroy
@@ -42,7 +42,7 @@ class CohortsController < ApplicationController
   private
 
   def cohort_params
-    params.require(:cohort).permit(:name, :start_date, :age, :end_date, :course_id)
+    params.require(:cohort).permit(:name, :start_date, :age, :end_date, :course_id, :user_id)
   end
 
 

@@ -14,7 +14,7 @@ class TasksController < ApplicationController
 
   def create
   Task.create(task_params)
-  redirect_to '/tasks'
+  redirect_to '/dashboard'
   end
 
   def edit
@@ -29,7 +29,7 @@ class TasksController < ApplicationController
 
   def destroy
     Task.find(params[:id]).destroy
-    redirect_to '/dashboard'
+    redirect_to dashboard_url
   end
 
   private

@@ -5,3 +5,5 @@ let taskdiv = document.getElementById('task-<%= @tasks.id%>')
 console.log("Current task clicked " + taskdiv.innerText)
 
 $(taskdiv).replaceWith("<%= j (render 'shared/new_task') %>");
+
+taskdiv.style.display = "block";

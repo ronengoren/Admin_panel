@@ -1,2 +1,0 @@
-class RecentActivityListsController < ApplicationController
-end

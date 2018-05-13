@@ -1,12 +1,13 @@
 class DashboardController < ApplicationController
 
+
   def index
     @tasks = Task.all
-    @students = Student.all
-    @cohorts = Cohort.all
-    @courses = Course.all
-    @instructors = Instructor.all
+    @activities = PublicActivity::Activity.order("created_at desc").limit(4)
+
+
   end
+
 
   def new
     @tasks = Task.new
@@ -23,6 +24,7 @@ class DashboardController < ApplicationController
 
   def create
   Task.create(task_params)
+  @tasks.user = current_user
   redirect_to '/dashboard'
   end
 
@@ -34,13 +36,15 @@ class DashboardController < ApplicationController
 
   def destroy
     Task.find(params[:id]).destroy
-    redirect_to '/dashboard'
+    redirect_to dashboard_url
   end
 
   private
 
   def task_params
-    params.require(:task).permit(:name, :description)
+    params.require(:task).permit(:name, :description, :term)
   end
+
+
 
 end
