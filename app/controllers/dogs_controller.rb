@@ -17,4 +17,14 @@ class DogsController < ApplicationController
       puts "i can see al my dogs"
     end
 
+    def ajax
+    @json_stuff = JSON.parse(HTTParty.get(@base_url='1').body)
+    end
+
+    private
+
+    def set_api
+      @base_irl = "https://swapi.co/api/films/"
+    end
+
 end

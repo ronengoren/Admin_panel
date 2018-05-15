@@ -2,8 +2,9 @@ class DashboardController < ApplicationController
 
 
   def index
+    @users = User.all
     @tasks = Task.all
-    @activities = PublicActivity::Activity.order("created_at desc").limit(4)
+    @activities = PublicActivity::Activity.order("created_at desc").limit(4).where(owner_id: current_user, owner_type: "User")
 
 
   end

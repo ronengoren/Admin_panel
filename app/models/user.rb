@@ -1,7 +1,11 @@
 class User < ApplicationRecord
 
-  include PublicActivity::Model
-  tracked
+
+
+
+  include PublicActivity::Common
+   
+  
 
 
 

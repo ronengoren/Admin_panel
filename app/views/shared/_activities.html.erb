@@ -1,0 +1,33 @@
+
+
+<div id="content">
+<div class="widget-box">
+  <div class="widget-title"> <span class="icon">
+    </span>
+    <h5>All Activities</h5>
+  </div>
+  <div class="widget-content nopadding">
+    <table class="table table-bordered table-striped with-check">
+    
+      <thead>
+        <tr>
+          <th>Activity</th>
+
+    
+
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+<% @activities.each do |activity| %>
+
+          <td>    <%= render_activity activity  %>      </td>
+
+        </tr>
+        <% end %>
+
+      </tbody>
+    </table>
+  </div>
+</div>
+</div>

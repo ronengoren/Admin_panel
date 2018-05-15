@@ -1,2 +1,3 @@
 added new  <%= link_to activity.trackable_type  %>
-Date: <%= link_to activity.created_at  %>
+<br>
+Date: <%= link_to activity.created_at.strftime("%A  %h %d %Y %I:%M %p")  %>

@@ -56,19 +56,20 @@
     <div class="widget-content nopadding collapse in" id="collapseG2">
         <ul class="recent-posts">
         <% @activities.each do |activity| %>
+        
         <div class="activity">
           </div>
 
           <li>
 
-            <div class="article-post"> <span class="user-info"><%= link_to activity.owner.email, activity.owner if activity.owner %> </span>
-              <p><a href="#">    <%= render_activity activity %></a> </p>
+            <div class="article-post"> <span class="user-info">    <%= link_to current_user.email, activity.owner if activity.owner %> </span>
+              <p><a href="">    <%= render_activity activity %></a> </p>
             </div>
           </li>
             <% end %>
 
           <li>
-            <button class="btn btn-warning btn-mini">View All</button>
+           <a href="/activities">  <button class="btn btn-warning btn-mini">View All</button></a> 
           </li>
           </ul>
           </div>
