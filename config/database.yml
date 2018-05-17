@@ -92,3 +92,6 @@ production:
   database: railsexamples_production
   username: railsexamples
   password: <%= ENV['RAILSEXAMPLES_DATABASE_PASSWORD'] %>
+
+username: <%= ENV['postgres'] %>
+password: <%= ENV['ronen1983'] %>
