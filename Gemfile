@@ -11,6 +11,10 @@ gem 'best_in_place', github: 'bernat/best_in_place'
 gem 'responders'
 gem 'jquery-rails-cdn'
 gem 'rest_in_place'
+gem 'fullcalendar-rails'
+gem 'momentjs-rails'
+gem 'ransack', '~>1.8', '>=1.8.2'
+
 
 
 gem "font-awesome-rails"

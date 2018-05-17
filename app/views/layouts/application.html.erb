@@ -4,12 +4,19 @@
     <title>pamela panel design</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-    <%= javascript_include_tag "application" %>
+    <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
     <%= javascript_include_tag 'http://ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.min.js' %>
 
     <%= jquery_include_tag :google, force: true %>
-
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    
+
+
+
+
+
+
+
   </head>
 
   <body>
@@ -25,11 +32,14 @@
 <% end %>
 </div>
 
-<div id="search">
-  <input type="text" placeholder="Search here..."/>
-  <button type="submit" class="tip-bottom" title="Search"><i class="icon-search icon-white"></i></button>
-</div>
 
+
+<div class="searchform" id="search">
+  <%= form_with url: search_path, local: true, method: :get, html: { class: "searchform" } do |form| %> 
+  <%= form.text_field :q, placeholder: "Search here...", data: {behavior: "autocomplete" } %>   
+  <%= form.button "Search" %>  
+<% end %>
+</div>
 
 
 

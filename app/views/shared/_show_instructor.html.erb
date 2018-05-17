@@ -1,0 +1,54 @@
+
+<div id="content">
+  <div id="content-header">
+  <div class="container-fluid"><hr>
+    <div class="row-fluid">
+      <div class="span12">
+        <div class="widget-box">
+          <div class="widget-title"> <span class="icon"> <i class="icon-briefcase"></i> </span>
+            <h5 >Instructor</h5>
+          </div>
+          <div class="widget-content">
+            <div class="row-fluid">
+              <div class="span6">
+                <table class="">
+                  <tbody>
+                    <tr>
+                      <td><h4><%= @instructors.first_name %> <%= @instructors.last_name %></h4></td>
+                    </tr>
+                    <tr>
+                      <td>Age: <%= @instructors.age %></td>
+                    </tr>
+                    <tr>
+                      <td>Salary: <%= @instructors.salary %></td>
+                    </tr>
+                    <tr>
+                      <td>Highest Education: <%= @instructors.highest_education %></td>
+                    </tr>
+                    <tr>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+<div class="widget-content  span6">
+    <table class="table table-bordered table-striped">
+      <thead>
+        <tr>
+    <td class="width30"><strong>All courses of</strong> <%= @instructors.first_name %> <%= @instructors.last_name %></td>
+
+         </tr>
+      </thead>
+      <tbody>
+        <tr>
+         
+          <td><%= @courses.name %></td>
+        </tr>
+        
+      </tbody>
+    </table>
+    </div>
+
+  </div>
+
+

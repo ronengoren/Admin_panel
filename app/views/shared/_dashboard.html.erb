@@ -5,15 +5,12 @@
   <div class="container-fluid">
     <div class="quick-actions_homepage">
       <ul class="quick-actions">
-        <li class="bg_lb"> <a href="/dashboard/"> <i class="icon-dashboard"></i> My Dashboard </a> </li>
-        <li class="bg_lg span3"> <a href="/cohorts/new"> <i class="icon-signal"></i> Add New Cohort</a> </li>
-        <li class="bg_ly"> <a href="/students/new"> <i class="icon-inbox"></i> Add New Student </a> </li>
-        <li class="bg_lo"> <a href="/courses/new"> <i class="icon-th"></i> Add New Course</a> </li>
-        <li class="bg_ls"> <a href="/instructors/new"> <i class="icon-fullscreen"></i>Add New Instructor</a> </li>
-        <li class="bg_lo span3"> <a href="form-common.html"> <i class="icon-th-list"></i> Forms</a> </li>
-        <li class="bg_ls"> <a href="buttons.html"> <i class="icon-tint"></i> Buttons</a> </li>
-        <li class="bg_lb"> <a href="interface.html"> <i class="icon-pencil"></i>Elements</a> </li>
-        <li class="bg_lg"> <a href="calendar.html"> <i class="icon-calendar"></i> Calendar</a> </li>
+        <li class="bg_lb span1"> <a href="/dashboard/"> <i class="icon-dashboard"></i> My Dashboard </a> </li>
+        <li class="bg_lg span1"> <a href="/cohorts/new"> <i class="icon-signal"></i> Add New Cohort</a> </li>
+        <li class="bg_ly span1"> <a href="/students/new"> <i class="icon-inbox"></i> Add New Student </a> </li>
+        <li class="bg_lo span1"> <a href="/courses/new"> <i class="icon-th"></i> Add New Course</a> </li>
+        <li class="bg_ls span1"> <a href="/instructors/new"> <i class="icon-fullscreen"></i>Add New Instructor</a> </li>
+        <li class="bg_lr span1"> <a href="calendar.html"> <i class="icon-calendar"></i> Calendar</a> </li>
 
       </ul>
     </div>
@@ -63,7 +60,7 @@
           <li>
 
             <div class="article-post"> <span class="user-info">    <%= link_to current_user.email, activity.owner if activity.owner %> </span>
-              <p><a href="">    <%= render_activity activity %></a> </p>
+              <p>   <%= render_activity activity %> </p>
             </div>
           </li>
             <% end %>

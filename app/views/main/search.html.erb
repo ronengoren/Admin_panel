@@ -1,0 +1,48 @@
+<%= render 'shared/navbar' %>
+
+
+
+
+
+<div id="content">
+
+<div class="widget-box">
+          <div class="widget-title">
+            <ul class="nav nav-tabs">
+              <li class="active"><a data-toggle="tab" href="#tab1">Students</a></li>
+              <li><a data-toggle="tab" href="#tab2">Cohorts</a></li>
+              <li><a data-toggle="tab" href="#tab3">Courses</a></li>
+              <li><a data-toggle="tab" href="#tab4">Instructors</a></li>
+
+            </ul>
+          </div>
+          <div class="widget-content tab-content">
+            <div id="tab1" class="tab-pane active">
+              <% @studentsquery.each do |student| %>
+      <p><%= link_to student.first_name, student %> <%= link_to student.last_name, student %></p>
+
+    <% end %>
+            </div>
+            <div id="tab2" class="tab-pane">
+            <% @cohortsquery.each do |cohort| %>
+            <p><%= link_to cohort.name, cohort %></p>
+            <% end %>           
+             </div>
+            <div id="tab3" class="tab-pane">
+            <% @coursesquery.each do |course| %>
+            <p><%= link_to course.name, course %></p>
+            <% end %>            
+            </div>
+             <div id="tab4" class="tab-pane">
+            <% @instructorsquery.each do |instructor| %>
+            <p><%= link_to instructor.first_name, instructor %> <%= link_to instructor.last_name, instructor %> </p>
+
+
+    <% end %>           
+     </div>
+
+
+          </div>
+        </div>
+
+  

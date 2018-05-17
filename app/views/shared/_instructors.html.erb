@@ -28,7 +28,7 @@
           <td><div class="pull-right"><%= link_to "", edit_instructor_path(d.id), class: "icon-pencil" %>
           <%= link_to "", instructor_path(@instructors), method: :delete,
           data: { confirm: "Are you sure you want to delete this project?" }%></td>
-          <td><%= d.id %></td>
+          <td><%= link_to d.id %></td>
           <td><%= d.first_name %></td>
           <td><%= d.last_name %></td>
           <td><%= d.age %></td>

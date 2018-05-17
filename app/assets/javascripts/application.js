@@ -9,7 +9,10 @@
 //
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
+
+
 //= require jquery
+//= require turbolinks
 //= require jquery_ujs
 //= require jquery.min
 //= require jquery.ui.custom
@@ -25,11 +28,9 @@
 //= require bootstrap
 //= require bootstrap-wysihtml5
 //= require bootstrap-colorpicker
-//= require bootstrap-datepicker
 //= require activestorage
 //= require jquery.easy-pie-chart
 //= require excanvas.min
-//= require matrix.calendar
 //= require fullcalendar.min
 //= require matrix
 //= require matrix.interface
@@ -38,10 +39,13 @@
 //= require select2.min
 //= require matrix.popover
 //= require matrix.tables
-//= require rails-ujs
+//= require matrix.calendar
+//= require moment
+//= require fullcalendar
+//= require fullcalendar/gcal
 //= require_tree .
 
 
-document.getElementById('ajaxcall').addEventListener('ajax:success', function(e){
+document.getElementById('ajaxcall').addEventListener('ajax:success', function(e) {
     console.log('Call exectued to render code');
-})
+});

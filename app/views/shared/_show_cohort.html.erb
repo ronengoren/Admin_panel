@@ -1,0 +1,74 @@
+
+<div id="content">
+  <div id="content-header">
+  <div class="container-fluid"><hr>
+    <div class="row-fluid">
+      <div class="span12">
+        <div class="widget-box">
+          <div class="widget-title"> <span class="icon"> <i class="icon-briefcase"></i> </span>
+            <h5 >Cohort</h5>
+          </div>
+          <div class="widget-content">
+            <div class="row-fluid">
+              <div class="span6">
+                <table class="">
+                  <tbody>
+                    <tr>
+                      <td><h4><%= @cohorts.name %></h4></td>
+                    </tr>
+                    <tr>
+                      <td>Start Date: <%= @cohorts.start_date %></td>
+                    </tr>
+                    <tr>
+                      <td>End Date: <%= @cohorts.end_date %></td>
+                    </tr>
+                    <tr>
+                      <td>Course: <%= @cohorts.course.name %></td>
+                    </tr>
+                    <tr>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+ <div class="widget-content  span6">
+    <table class="table table-bordered table-striped">
+      <thead>
+        <tr>
+    <td class="width30"><strong>All courses of</strong> <%= @cohorts.name %></td>
+
+
+
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+         
+          <td><%= @cohorts.course.name %></td>
+        </tr>
+        
+      </tbody>
+    </table>
+<table class="table table-bordered table-striped">
+      <thead>
+        <tr>
+                <td class="width30"><strong>All Students of</strong> <%= @cohorts.name %></td>
+
+
+
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <% @students.each do |d| %>
+          <td><%= d.first_name %> <%= d.last_name %></td>
+        </tr>
+        
+        <% end %>
+      </tbody>
+    </table>
+
+
+  </div>
+
+

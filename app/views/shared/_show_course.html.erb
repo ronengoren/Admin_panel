@@ -1,0 +1,67 @@
+
+
+<div id="content">
+  <div id="content-header">
+  <div class="container-fluid"><hr>
+    <div class="row-fluid">
+      <div class="span12">
+        <div class="widget-box">
+          <div class="widget-title"> <span class="icon"> <i class="icon-briefcase"></i> </span>
+            <h5 >Course</h5>
+          </div>
+          <div class="widget-content">
+            <div class="row-fluid">
+              <div class="span6">
+                <table class="">
+                  <tbody>
+                    <tr>
+                      <td><h4><%= @courses.name %></h4></td>
+                    </tr>
+                    <tr>
+                      <td>Total Class Hours <%= @courses.total_class_hour %></td>
+                    </tr>
+                  
+                
+                    <tr>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+ <div class="widget-content  span6">
+    <table class="table table-bordered table-striped">
+      <thead>
+        <tr>
+    <td class="width30"><strong>All Cohorts of</strong> <%= @courses.name %></td>
+
+
+
+        </tr>
+      </thead>
+      <tbody>
+       <tr>
+          <% @cohorts.each do |d| %>
+          <td><%= link_to d.name %></td>
+        </tr>
+        <% end %>
+
+      </tbody>
+    </table>
+<table class="table table-bordered table-striped">
+      <thead>
+        <tr>
+        <td class="width30"><strong>All Students of</strong> <%= @courses.name %></td>
+
+
+
+        </tr>
+      </thead>
+      <tbody>
+       
+      </tbody>
+    </table>
+
+
+  </div>
+
+

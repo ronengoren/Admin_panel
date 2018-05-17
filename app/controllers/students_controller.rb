@@ -7,10 +7,14 @@ def index
   @students = Student.all.order("id ASC")
 
 
+  
+
+
 end
 
 def show
   @students = Student.find(params[:id])
+
 end
 
 def new

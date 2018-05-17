@@ -24,7 +24,7 @@
           <td><div class="pull-right"><%= link_to "", edit_course_path(d.id), class: "icon-pencil" %>
           <%= link_to "", course_path(@courses), method: :delete,
         data: { confirm: "Are you sure you want to delete this project?" }%></td>          <td><%= d.id %></td>
-          <td><%= d.name %></td>
+          <td><%= link_to d.name %></td>
           <td><%= d.total_class_hour %></td>
 
         </tr>

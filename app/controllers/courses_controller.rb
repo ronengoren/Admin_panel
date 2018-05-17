@@ -2,10 +2,13 @@ class CoursesController < ApplicationController
 
   def index
     @courses = Course.all.order("id ASC")
+
   end
 
   def show
     @courses = Course.find(params[:id])
+    @cohorts = @courses.cohorts
+
   end
 
   def new
