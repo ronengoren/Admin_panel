@@ -45,3 +45,19 @@ you can always sign up for a new user.
 * Activity feed per user
 
 ![image](https://user-images.githubusercontent.com/18123962/40380798-0ba3b50e-5dc8-11e8-8f09-75691bdf1735.png)
+
+* Dashboard buttons to add new Cohorts/Students/Courses/Instructors 
+
+![image](https://user-images.githubusercontent.com/18123962/40381255-3ae9ab24-5dc9-11e8-9696-fa43b4376a6b.png)
+
+
+
+![image](https://user-images.githubusercontent.com/18123962/40381259-3e7a8772-5dc9-11e8-8678-5d6ac2ee410c.png)
+
+
+![image](https://user-images.githubusercontent.com/18123962/40381263-40264d68-5dc9-11e8-9523-69c087a09d4d.png)
+
+![image](https://user-images.githubusercontent.com/18123962/40381270-423390d4-5dc9-11e8-98ae-6d5835912114.png)
+
+![image](https://user-images.githubusercontent.com/18123962/40381273-441ad240-5dc9-11e8-821e-1157c0a0223c.png)
+
