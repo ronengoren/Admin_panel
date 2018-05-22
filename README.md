@@ -1,4 +1,6 @@
-# README - Admin School Panel
+# Admin School Panel
+
+Admin Panel is an app build for school principals, using Ruby on Rails, UI Branding, Data Integrity, AJAX in Rails, APIs and deploying a Rails application to Heroku
 
 Features on the app:
 
@@ -10,13 +12,13 @@ Features on the app:
 
 * Login / logout / edit profile / delete profile - Devise
 
-* 
+* Search feature divided to tabs - for each 
 
-* 
 
-* 
+# How to use?
 
-* 
+Login Credentials:
+user name: 1@1.com
+password: 123456
 
-* 
-# Admin_panel
+you can always sign up for a new user.
