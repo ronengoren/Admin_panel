@@ -38,6 +38,10 @@ you can always sign up for a new user.
 
 ![image](https://user-images.githubusercontent.com/18123962/40380434-0f11bd4a-5dc7-11e8-8688-1bfa2b544f2c.png)
 
+* Task list available to all users
+
 ![image](https://user-images.githubusercontent.com/18123962/40380791-07ea781c-5dc8-11e8-8890-3cdb9340066c.png)
+
+* Activity feed per user
 
 ![image](https://user-images.githubusercontent.com/18123962/40380798-0ba3b50e-5dc8-11e8-8f09-75691bdf1735.png)
